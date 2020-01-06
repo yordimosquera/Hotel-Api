@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
-import * as dotenv from "dotenv";
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../../../.env") });
 
-dotenv.config();
-
-const { DB_NAME, DB_URL, DB_USER, DB_PASSWORD } = process.env;
-const url = `mongodb://${DB_USER}:${DB_PASSWORD}${DB_URL}/${DB_NAME}`;
+const { DB_NAME, DB_URL, DB_USER, DB_PASSWORD, NODE_ENV } = process.env;
+const USER_DATA =
+  NODE_ENV === "production"
+    ? `${DB_USER}:${DB_PASSWORD}`
+    : `${DB_USER}${DB_PASSWORD}`;
+const url = `mongodb://${USER_DATA}${DB_URL}/${DB_NAME}`;
 
 mongoose.set("debug", true);
 try {

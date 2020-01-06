@@ -1,7 +1,8 @@
+import { PositionInterface } from "../position";
 export interface HotelInterface {
-    name: string,
-    stars: number,
-    price: number,
-    image?: string,
-    amenities: [string]
+  name: string;
+  qualification: number;
+  price: number;
+  image?: string;
+  position?: PositionInterface;
 }
