@@ -8,7 +8,7 @@ export const Services = {
       const data = await (typeof query !== "undefined"
         ? Hotel.find(query)
         : Hotel.find());
-      return data;
+      return { items: data, size: data.length };
     } catch (error) {
       return ErrorResponses.findHotels(error);
     }
