@@ -10,7 +10,7 @@
     "start": "npm run build &&  export NODE_ENV=production && node dist",
     "mkdir-dist": "rm -rf dist && mkdir dist",
     "cp-to-dist": "gulp copy-to-dist",
-    "build": "npm run mkdir-dist && tsc",
+    "build": "npm run mkdir-dist && tsc && npm run cp-to-dist",
     "test": "jest"
   },
   "author": "Yordi Mosquera",
