@@ -1,11 +1,6 @@
 import { Controller } from "../../controllers/hotel";
 
 export const Hotel = {
-  find: {
-    verb: "get",
-    mountPoint: "/",
-    handler: Controller.findHotels
-  },
   findHotels: {
     verb: "get",
     mountPoint: "/hotels",
