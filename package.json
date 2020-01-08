@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "start": "npm run build &&  export NODE_ENV=production && node dist",
     "mkdir-dist": "rm -rf dist && mkdir dist",
