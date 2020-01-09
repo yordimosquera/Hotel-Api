@@ -1,6 +1,5 @@
 import { Hotel } from "../../database/models/hotel";
 import { ErrorResponses } from "../../errorResponses";
-import { HotelInterface } from "../../interfaces/hotel";
 
 export const Services = {
   findHotels: async (query: any) => {
